@@ -1,4 +1,4 @@
-package harshit;
+package patterns;
 
 public class EquilateralTriangle {
 
