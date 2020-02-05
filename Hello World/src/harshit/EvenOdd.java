@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class EvenOdd {
 	
+	
+	
+	
 	public static void main(String args[]){
 		
 		int n=0;
