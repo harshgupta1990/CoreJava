@@ -18,8 +18,9 @@ public class Test2 {
 		Child1 q = new Child1();
 		System.out.println(q.a);
 		
-		Parent1 p1 = new Child1();
-		System.out.println(p1.a);
+		Parent1 p1 = new Child1();     
+		System.out.println(p1.a);     //Overriding is only applicable for methods not 
+									  //for variables
 		
 
 	}

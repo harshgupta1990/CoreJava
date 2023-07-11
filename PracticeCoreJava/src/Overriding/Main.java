@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Mother b = new Baby();;
+        Mother b = new Baby();
 
         b.smile();
 

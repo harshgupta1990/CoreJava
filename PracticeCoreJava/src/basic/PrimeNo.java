@@ -16,6 +16,16 @@ public class PrimeNo {
 		
 		n=sc.nextInt();
 		
+		if(n==0 || n== 1)
+		{
+			isPrime=false;
+		}
+			
+		if(n==2)
+		{
+			isPrime=true;
+		}
+			
 		if(n>2)
 		{
 			for(int i=2; i<n;i++)

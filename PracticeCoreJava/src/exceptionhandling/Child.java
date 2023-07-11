@@ -16,14 +16,13 @@ class Mother {
 	  		
 	  	}
      
-
   } 
 
 } 
 
  
-
-public class Child extends Mother{ 
+public class Child extends Mother
+{ 
 
   void smile() throws FileNotFoundException { 
 

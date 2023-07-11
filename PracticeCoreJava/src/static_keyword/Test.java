@@ -13,9 +13,8 @@ class A
 	int y=23;
 }
 
-public class Test {
-	
-	
+public class Test 
+{
 	
 	static int i=10;
 	int k=12;

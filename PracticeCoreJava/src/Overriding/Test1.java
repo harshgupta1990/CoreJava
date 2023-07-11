@@ -2,7 +2,8 @@ package Overriding;
 
 class P{
 	
-	public Object m1() {
+	public Object m1() 
+	{
 		return null;
 	}
 	

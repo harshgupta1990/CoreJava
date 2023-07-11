@@ -3,8 +3,6 @@ package basic;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import sun.util.logging.resources.logging;
-
 public class Factorial {
 
 	public static void main(String[] args) {

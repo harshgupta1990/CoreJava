@@ -7,7 +7,8 @@ public class IdentityHashMap1 {
 
     public static void main(String args[]) {
 
-        Map<String,String> map=new IdentityHashMap<String,String>();
+        Map<String,String> map=new IdentityHashMap<String,String>();  // Identity HashMap uses reference equality 
+        															//	instead of Object equality
 
         map.put(new String("A"),"First");
 

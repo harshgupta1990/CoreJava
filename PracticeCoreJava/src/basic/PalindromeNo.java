@@ -21,7 +21,7 @@ public class PalindromeNo {
 		{
 			r=n%10;          //remainder
 			rev=(rev*10)+r;  //main logic
-			n=n/10;          //quostent is assigned to actual no (it will eliminate the remainder part)
+			n=n/10;          //questant is assigned to actual no (it will eliminate the remainder part)
 		}
 		
 		System.out.println("rev is:- " + rev);

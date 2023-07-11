@@ -3,8 +3,6 @@ package collection;
 
 import java.util.HashSet;
 
-import Employee;
-
 public class HashSet1 {
 
 	public static void main(String[] args) {

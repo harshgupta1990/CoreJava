@@ -14,7 +14,7 @@ public class Arraylist1  {
 
          list1.add(new Integer(3));
 
-         list1.remove(1);
+         list1.remove(2);
 
          System.out.println(list1);
 
