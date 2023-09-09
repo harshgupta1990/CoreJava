@@ -57,14 +57,14 @@ public class Java8StreamsApplication
 	public static void method6(List<Employee> empList)
 	{
 		Map<String, Double> avgSalaryOfMaleAndFemaleEmployee= empList.stream()
-												  .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getSalary)));
+		   .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getSalary)));
 		System.out.println(avgSalaryOfMaleAndFemaleEmployee);
 	}
 	
 	public static void method7(List<Employee> empList)
 	{
 		Optional<String> nameOfEmployeeWithMaxExp= empList.stream()
-													  .sorted((a,b) ->a.getYearOfJoining()).map(Employee::getName) 
+													  .sorted((a,b) ->a.getYearOfJoining()-b.getYearOfJoining()).map(Employee::getName) 
 													  .findFirst();
 		System.out.println(nameOfEmployeeWithMaxExp);
 	}
@@ -72,14 +72,16 @@ public class Java8StreamsApplication
 	public static void method8(List<Employee> empList)
 	{
 		Optional<Employee> youngestFemaleEmployeeFromHRDepartment= empList.stream()
-													  .filter(emp -> emp.getGender()=="Female" && emp.getDept()=="HR")
-													  .max(Comparator.comparing(Employee::getAge));
-		System.out.println(youngestFemaleEmployeeFromHRDepartment.get());
+													  .filter(emp -> emp.getGender().equals("F") && emp.getDept().equals("HR"))
+													  .min(Comparator.comparing(Employee::getAge));
+		System.out.println(youngestFemaleEmployeeFromHRDepartment.get().getName());
 	}
 	
 	public static void method9(List<Employee> empList)
 	{
-		Double avgAgeOfEmployees=empList.stream().collect(Collectors.averagingInt(Employee::getAge));
+		Double avgAgeOfEmployees=empList.stream()
+				.collect(Collectors.averagingInt(Employee::getAge));
+		
 		System.out.println(avgAgeOfEmployees);
 	}
 	
@@ -99,13 +101,13 @@ public class Java8StreamsApplication
 	{
 		empList.add(new Employee(1111, "Piyush", 28, 20000, "IT", "M", 2013) );
 		empList.add(new Employee(2222, "Ajay", 23, 25000, "HR", "M", 2011) );
-		empList.add(new Employee(3333, "Vijay", 31, 60000, "Accounts", "M", 2013) );
+		empList.add(new Employee(3333, "Vijay", 31, 60000, "ACCOUNTS", "M", 2013) );
 		empList.add(new Employee(4444, "Karan", 22, 27000, "IT", "M", 2019) );
-		empList.add(new Employee(5555, "Vikas", 65, 100000, "Accounts", "M", 2014) );
-		empList.add(new Employee(6666, "Ankit", 43, 90000, "Hr", "M", 2017) );
+		empList.add(new Employee(5555, "Vikas", 65, 100000, "ACCOUNTS", "M", 2014) );
+		empList.add(new Employee(6666, "Ankita", 43, 90000, "HR", "F", 2017) );
 		empList.add(new Employee(7777, "Mayank", 19, 19000, "IT", "M", 2015) );
-		empList.add(new Employee(8888, "Shruti", 35, 75000, "Ops", "F", 2018) );
-		empList.add(new Employee(9999, "Shraddha", 39, 85000, "IT", "F", 2020) );
+		empList.add(new Employee(8888, "Shruti", 35, 75000, "OPS", "F", 2018) );
+		empList.add(new Employee(9999, "Shraddha", 39, 85000, "HR", "F", 2020) );
 		
 		//https://www.youtube.com/watch?v=4qnT-ya9HGk
 		
