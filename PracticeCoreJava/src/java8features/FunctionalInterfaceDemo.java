@@ -13,7 +13,4 @@ public interface FunctionalInterfaceDemo {
 	{
 		System.out.println("Static method");
 	}
-	
-	
-
 }
