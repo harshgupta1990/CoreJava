@@ -14,8 +14,6 @@ public abstract class Test extends P {
 	
 	public static void main(String[] args) {
 		
-		
-
 	}
 
 }
