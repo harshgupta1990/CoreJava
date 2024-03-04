@@ -17,6 +17,11 @@ public class Demo {
 //		
 //		System.out.println(employees);
 		
+		Set<Integer> s = new HashSet<>();
+		s.add(null);
+		s.add(23);
+		System.out.println(s);
+		
 		
 	}
 

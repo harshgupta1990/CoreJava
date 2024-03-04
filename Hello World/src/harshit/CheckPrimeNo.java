@@ -9,7 +9,7 @@ public class CheckPrimeNo {
 		
 		Scanner sc=new Scanner(System.in);
 		
-		System.out.println("Enter th No:- ");
+		System.out.println("Enter the No:- ");
 		int n=sc.nextInt();
 		boolean flag=true;
 		

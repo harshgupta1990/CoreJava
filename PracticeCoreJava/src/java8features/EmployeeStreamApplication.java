@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-//https://www.youtube.com/watch?v=4qnT-ya9HGk
+//https://www.youtube.com/watch?v=AFmyV43UBgc&list=PLuG8qHUzicYFKh6QWSN5TQBsclJLWsBZb&index=4
 
 public class EmployeeStreamApplication {
 	static List<Employee> employeeList = new ArrayList<Employee>();
@@ -111,6 +111,7 @@ public class EmployeeStreamApplication {
 		Optional<Employee> highestPaidEmployeeWrapper = employeeList.stream()
 				.collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
 		System.out.println(highestPaidEmployeeWrapper.get().getName());
+		
 	}
 
 	public static void method5() {
