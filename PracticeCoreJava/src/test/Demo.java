@@ -1,26 +1,31 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.Scanner;
 
 public class Demo {
 
 	public static void main(String[] args) {
 		
-//		List<Employee> list = new ArrayList<>();
-//		
-//		Set<Employee> employees = new HashSet<>();
-//		employees.add(new Employee(1,"Harshit"));
-//		employees.add(new Employee(1,"Harshit"));
-//		
-//		System.out.println(employees);
+		Scanner sc = new Scanner(System.in);
 		
-		Set<Integer> s = new HashSet<>();
-		s.add(null);
-		s.add(23);
-		System.out.println(s);
+		System.out.println("Enter the no: -");
+		int n = sc.nextInt();
+		
+		int num = n;
+		int rev=0;
+		
+		while(num!=0) {
+			rev=rev*10;
+			rev=rev+num%10;
+			num=num/10;
+		}
+		
+		if(n==rev) {
+			System.out.println("Palindrome no");
+		}
+		
+		else
+			System.out.println("Not Palindrome No");
 		
 		
 	}
